@@ -1,0 +1,29 @@
+{
+  "dashboard": {
+    "title": "Weather App Dashboard",
+    "panels": [
+      {
+        "type": "stat",
+        "title": "Total Weather Requests",
+        "targets": [
+          {
+            "expr": "weather_requests_total",
+            "refId": "A"
+          }
+        ]
+      },
+      {
+        "type": "graph",
+        "title": "Request Latency",
+        "targets": [
+          {
+            "expr": "weather_request_latency_seconds_bucket",
+            "refId": "B"
+          }
+        ]
+      }
+    ],
+    "schemaVersion": 36,
+    "version": 1
+  }
+}
